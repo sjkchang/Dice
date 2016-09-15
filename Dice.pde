@@ -1,4 +1,5 @@
 int dieTotal = 0;
+int allTotal = 0;
 void setup()
 {
 	size(300, 300);
@@ -17,8 +18,10 @@ void draw()
 		die1.show();
 		die1.roll();
 	}
-	//dietotal = dieTotal + die1.value;
-	text(" Total: " + dieTotal + " ", 130, 280);
+	text(" Total: " + allTotal + " ", 130, 280);
+	text ("This roll: " + dieTotal + " ", 40, 280);
+	dieTotal = 0;
+
 
 }
 void mousePressed()
@@ -45,12 +48,14 @@ class Die //models one single dice cube
 		{
 			ellipse(myX + 25, myY + 25, 10, 10);
 			dieTotal = dieTotal += 1;
+			allTotal = allTotal += 1;
 		}
 		if(value == 2)
 		{
 			ellipse(myX + 15, myY+ 15, 10, 10);
 			ellipse(myX + 35, myY + 35, 10, 10);
 			dieTotal = dieTotal + 2;
+			allTotal = allTotal + 2;
 		}
 		if(value == 3)
 		{
@@ -58,6 +63,8 @@ class Die //models one single dice cube
 			ellipse(myX + 35, myY + 35, 10, 10);
 			ellipse(myX + 25, myY + 25, 10, 10);
 			dieTotal = dieTotal += 3;
+			allTotal = allTotal += 3;
+
 
 		}
 		if(value == 4)
@@ -67,6 +74,8 @@ class Die //models one single dice cube
 			ellipse(myX + 37.5, myY + 12.5, 10, 10);
 			ellipse(myX + 12.5, myY + 37.5, 10, 10);
 			dieTotal = dieTotal += 4;
+			allTotal = allTotal += 4;
+
 		}
 		if(value == 5)
 		{
@@ -76,6 +85,7 @@ class Die //models one single dice cube
 			ellipse(myX + 37.5, myY + 12.5, 10, 10);
 			ellipse(myX + 12.5, myY + 37.5, 10, 10);
 			dieTotal = dieTotal += 5;
+			allTotal = allTotal += 5;
 		}
 		if(value == 6)
 		{
@@ -86,6 +96,7 @@ class Die //models one single dice cube
 			ellipse(myX + 12.5, myY + 25 ,10, 10);
 			ellipse(myX + 37.5, myY + 25, 10, 10);
 			dieTotal = dieTotal += 6;
+			allTotal = allTotal += 6;
 		}
 			fill(0);
 			

@@ -9,7 +9,7 @@ void draw()
 	//your code here
 	
 	
-	background(0);
+	background(255);
 	for(int x = 50; x < 250; x = x + 80)
 	for(int y = 40; y < 250; y = y + 80)
 	{
@@ -18,7 +18,6 @@ void draw()
 		die1.roll();
 	}
 	//dietotal = dieTotal + die1.value;
-	System.out.println(dieTotal);
 	text(" Total: " + dieTotal + " ", 130, 280);
 
 }
@@ -41,7 +40,7 @@ class Die //models one single dice cube
 	void roll()
 	{
 		//your code here
-
+		fill(255);
 		if(value == 1)
 		{
 			ellipse(myX + 25, myY + 25, 10, 10);
@@ -88,15 +87,16 @@ class Die //models one single dice cube
 			ellipse(myX + 37.5, myY + 25, 10, 10);
 			dieTotal = dieTotal += 6;
 		}
-			fill(255);
+			fill(0);
 			
 
 	}
 	void show()
 	{
 		//your code here
-		rect(myX, myY, 50, 50);
 		fill(0);
+		rect(myX, myY, 50, 50);
+		fill(255);
 	}
 		
 		

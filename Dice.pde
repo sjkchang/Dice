@@ -19,7 +19,7 @@ void draw()
 	}
 	//dietotal = dieTotal + die1.value;
 	System.out.println(dieTotal);
-	text(" Total:" + dieTotal + " ", 150, 280);
+	text(" Total: " + dieTotal + " ", 130, 280);
 
 }
 void mousePressed()
